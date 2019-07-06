@@ -1,9 +1,12 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/spf13/viper"
 )
 
 func main() {
-	_ = viper.find("bob")
+	viper.AutomaticEnv()
+	fmt.Printf("%s", viper.GetString("HOME"))
 }
